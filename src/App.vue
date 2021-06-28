@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <button-counter></button-counter>
-    <Comp2 msg="fred"/>
+    <Comp2 msg="freddy"/>
     <button-counter></button-counter>
     <img alt="Vue logo" src="https://vuejs.org/images/logo.png">
     <HelloWorld msg="Welcome ANDY to Your Vue.js App"/>
