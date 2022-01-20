@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <ManualWiring msg="andy"/>
     <button-counter></button-counter>
     <Comp2 msg="freddy"/>
     <button-counter></button-counter>
@@ -11,12 +12,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Comp2 from './components/comp2.vue'
+import ManualWiring from './components/ManualWiring.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Comp2
+    Comp2,
+    ManualWiring,
   }
 }
 </script>
