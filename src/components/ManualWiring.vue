@@ -5,8 +5,8 @@
     <p>hi there {{ mycount }} / {{ mycount2 }} </p>
   </div>
   <!-- <webaudio-knob ref="knobRef" src="../knobs/LittlePhatty.png" min="0" max="100"></webaudio-knob> -->
-  <button @click="click">my button</button>
-  <button ref="buttRef">my button raw click handler</button>
+  <button @click="click">regular button</button>
+  <button ref="buttRef">button wired in mounted, with an addEventListener() and watch: on 'mycount'</button>
   <hr>
 </template>
 
@@ -34,7 +34,15 @@ export default {
       console.log('got a click')
       self.mycount = 10
     })
-  }
+  },
+  watch: {
+    // whenever question changes, this function will run
+    mycount: function (newValue, oldValue) {
+      console.log('watch triggered', newValue, oldValue)
+      this.mycount2 = 3.14
+      this.$refs.buttRef.innerText = "raw has been ALTERED";
+    }
+  },  
 }
 </script>
 
