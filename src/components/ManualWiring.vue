@@ -13,8 +13,13 @@
 
 <script>
 
+// WHY DOESN'T IMPORTING FROM A URL WORK?
 // import { AddThings } from "https://codepen.io/chriscoyier/pen/bGBwmLa.js";
-// import { AddThings } from "../utils/bGBwmLa.js";
+import { AddThings } from "../utils/bGBwmLa.js";  // identical, local version works
+
+// WHY DOESN'T IMPORTING FROM A URL WORK?
+// Nope, despite https://stackoverflow.com/questions/34607252/es6-import-module-from-url 
+// import { normalize } from 'https://cdn.jsdelivr.net/gh/elgs/ip6/ip6-es.js';
 
 import { fred, calcfred } from "../utils/utils.js";
 
@@ -40,7 +45,8 @@ export default {
     console.log('imported fred is', fred)
     console.log('imported calcfred() is', calcfred())
     console.log('imported AddThings() is', AddThings)
-    // console.log('imported AddThings() is', AddThings(1, 2))
+    console.log('using imported AddThings() =', AddThings(1, 2))
+    // console.log('imported normalize =', normalize)
 
     // console.log('MyName', MyName)
 
