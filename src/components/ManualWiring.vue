@@ -36,7 +36,7 @@ export default {
     })
   },
   watch: {
-    // whenever question changes, this function will run
+    // whenever 'count' changes, this function will run
     mycount: function (newValue, oldValue) {
       console.log('watch triggered', newValue, oldValue)
       this.mycount2 = 3.14
