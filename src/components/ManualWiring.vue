@@ -13,10 +13,9 @@
 
 <script>
 
-// WHY DOESN'T IMPORTING FROM A URL WORK?
+// WHY DOESN'T IMPORTING FROM A URL WORK?  YES IT DOES, just not on StackBlitz or CodeSandbox
 // import { AddThings } from "https://codepen.io/chriscoyier/pen/bGBwmLa.js";
 import { AddThings } from "../utils/bGBwmLa.js";  // identical, local version works
-
 // WHY DOESN'T IMPORTING FROM A URL WORK?
 // Nope, despite https://stackoverflow.com/questions/34607252/es6-import-module-from-url 
 // import { normalize } from 'https://cdn.jsdelivr.net/gh/elgs/ip6/ip6-es.js';
