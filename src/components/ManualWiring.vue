@@ -12,8 +12,11 @@
 </template>
 
 <script>
-// import { MyName } from "https://codepen.io/chriscoyier/pen/bGBwmLa.js";
-import { fred, calcfred } from "../utils/utils.js"
+
+// import { AddThings } from "https://codepen.io/chriscoyier/pen/bGBwmLa.js";
+// import { AddThings } from "../utils/bGBwmLa.js";
+
+import { fred, calcfred } from "../utils/utils.js";
 
 export default {
   name: 'ManualWiring',
@@ -36,6 +39,9 @@ export default {
     console.log("mounted on: ", this.$refs.buttRef)
     console.log('imported fred is', fred)
     console.log('imported calcfred() is', calcfred())
+    console.log('imported AddThings() is', AddThings)
+    // console.log('imported AddThings() is', AddThings(1, 2))
+
     // console.log('MyName', MyName)
 
     let self = this // must preserve 'this' for handlers to make use of
