@@ -3,6 +3,7 @@
   <div class="bluey">
     <p>hi there {{ msg }}</p>
     <p>hi there {{ mycount }} / {{ mycount2 }} </p>
+    <p>importedfred is {{ importedfred }} </p>
   </div>
   <!-- <webaudio-knob ref="knobRef" src="../knobs/LittlePhatty.png" min="0" max="100"></webaudio-knob> -->
   <button @click="click">regular button</button>
@@ -11,6 +12,9 @@
 </template>
 
 <script>
+// import { MyName } from "https://codepen.io/chriscoyier/pen/bGBwmLa.js";
+import { fred, calcfred } from "../utils/utils.js"
+
 export default {
   name: 'ManualWiring',
   props: {
@@ -20,6 +24,7 @@ export default {
     return {
       mycount: 55,
       mycount2: 98765,
+      importedfred: fred,
     };
   },
   methods: {
@@ -29,6 +34,10 @@ export default {
   },  
   mounted: function(el) {
     console.log("mounted on: ", this.$refs.buttRef)
+    console.log('imported fred is', fred)
+    console.log('imported calcfred() is', calcfred())
+    // console.log('MyName', MyName)
+
     let self = this // must preserve 'this' for handlers to make use of
     this.$refs.buttRef.addEventListener('click', function(e) {
       console.log('got a click')
