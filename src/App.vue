@@ -12,6 +12,8 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Comp2 from './components/comp2.vue'
+
+import "https://g200kg.github.io/webaudio-controls/webaudio-controls.js"
 import ManualWiring from './components/ManualWiring.vue'
 
 export default {

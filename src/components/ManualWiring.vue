@@ -5,9 +5,11 @@
     <p>hi there {{ mycount }} / {{ mycount2 }} </p>
     <p>importedfred is {{ importedfred }} </p>
   </div>
-  <!-- <webaudio-knob ref="knobRef" src="../knobs/LittlePhatty.png" min="0" max="100"></webaudio-knob> -->
+
   <button @click="click">regular button</button>
   <button ref="buttRef">button wired in mounted, with an addEventListener() and watch: on 'mycount'</button>
+
+  <!-- <webaudio-knob ref="knobRef" src="../knobs/LittlePhatty.png" min="0" max="100"></webaudio-knob> -->
   <hr>
 </template>
 
@@ -19,6 +21,9 @@ import { AddThings } from "../utils/bGBwmLa.js";  // identical, local version wo
 // WHY DOESN'T IMPORTING FROM A URL WORK?
 // Nope, despite https://stackoverflow.com/questions/34607252/es6-import-module-from-url 
 // import { normalize } from 'https://cdn.jsdelivr.net/gh/elgs/ip6/ip6-es.js';
+
+// WHAT ABOUT IMPORTING A REGULAR JS FILE?  WORKS but template above doesn't see it. 
+// import "https://g200kg.github.io/webaudio-controls/webaudio-controls.js"
 
 import { fred, calcfred } from "../utils/utils.js";
 
